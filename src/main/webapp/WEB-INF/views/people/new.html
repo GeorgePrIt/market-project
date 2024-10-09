@@ -9,6 +9,9 @@
 <form th:method="POST" th:action="@{/people}" th:object="${person}">
     <label for="name">Enter name: </label>
     <input type="text" th:field="*{name}" id="name"/>
+
+    <br/>
+    
 <!--    Получаем доступ к полям объекта Person-->
 <!--    Выводим ошибку в случае неправилльного ввода-->
     <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div>
